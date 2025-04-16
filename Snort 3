@@ -1,0 +1,30 @@
+# Getting Started with Snort 3
+
+This repository documents my first hands-on experience with **Snort 3** as an Intrusion Detection System (IDS) for network security.
+
+## Why Snort 3?
+
+Snort 3 is a major upgrade over previous versions, offering:
+
+- **Better performance** with multithreading
+- **Clean Lua-based configuration**
+- **Easier rule customization**
+- **Modular and flexible design**
+
+## What I Did
+
+### 1. Snort Setup
+- Configured Snort 3 in **IDS mode** to monitor network traffic.
+- Used a Lua-based config file: `snort.lua`.
+
+### 2. Traffic Simulation
+- Launched a **SYN flood attack** against a vulnerable website (within my isolated network environment) to simulate malicious traffic.
+
+### 3. Packet Monitoring
+- Used **Wireshark** to monitor the same traffic Snort was analyzing.
+- Applied filters to focus on **TCP traffic** for comparison.
+
+### 4. Command Used
+
+```bash
+sudo snort -i eth0 -c /etc/snort/snort.lua
